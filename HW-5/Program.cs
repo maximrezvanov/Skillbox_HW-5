@@ -245,8 +245,7 @@ namespace HW5
                 int[] numbers = new int[n];
                 bool isArifmethic = true;
                 bool isGeometric = true;
-                int arifm = numbers[1] - numbers[0];
-                int geometric = numbers[1] / numbers[0];
+                
 
                 Console.WriteLine("Enter array:");
 
@@ -255,20 +254,22 @@ namespace HW5
                     numbers[i] = Convert.ToInt32(Console.ReadLine());
                 }
 
+                int arifm = numbers[1] - numbers[0];
+                int geometric = numbers[1] / numbers[0];
+
                 for (int i = 0; i < n; i++)
-                {
+                { 
                     if (numbers[i] != (numbers[0] + (i) * arifm))
                     {
                         isArifmethic = false;
                         break;
-
                     }
+
                     else if (numbers[i + 1] != numbers[i] * geometric)
                     {
                         isGeometric = false;
                         break;
                     }
-
                 }
 
                 if (isArifmethic)
@@ -282,8 +283,9 @@ namespace HW5
 
             }
 
-            Console.WriteLine("Task 5.5");
             Console.WriteLine();
+
+            Console.WriteLine("Task 5.5");
 
             uint example = AckermannF(3, 1);
             Console.WriteLine(example);
